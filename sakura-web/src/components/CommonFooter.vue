@@ -1,14 +1,13 @@
 <template>
   <footer id="footer">
     <div class="header-wrap">
-      <h1 class="header-logo">TOTAL WORKS</h1>
+      <h1 class="header-logo">sakuragumi</h1>
       <nav class="header-nav">
         <ul>
-          <li><a href="#">home</a></li>
-          <li><a href="#">about</a></li>
-          <li><a href="#">service</a></li>
-          <li><a href="#">company</a></li>
-          <li><a href="#">contact</a></li>
+          <li><a href="#app">home</a></li>
+          <li><a href="#about">about</a></li>
+          <li><a href="#business">service</a></li>
+          <li><a href="#company">company</a></li>
         </ul>
       </nav>
     </div>
@@ -50,7 +49,7 @@ export default {
 }
 
 .header-nav li {
-  margin-right: 35px;
+  margin-right: 15px;
   font-size: 16px;
 }
 

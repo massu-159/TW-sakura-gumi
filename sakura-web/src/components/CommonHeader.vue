@@ -4,11 +4,11 @@
       <h1 class="header-logo">TOTAL WORKS</h1>
       <nav class="header-nav">
         <ul>
-          <li><a href="#">home</a></li>
-          <li><a href="#">about</a></li>
-          <li><a href="#">service</a></li>
-          <li><a href="#">company</a></li>
-          <li><a href="#">contact</a></li>
+          <li><a href="#app">home</a></li>
+          <li><a href="#about" >about</a></li>
+          <li><a href="#business">service</a></li>
+          <li><a href="#company">company</a></li>
+          <li><a href="#contact">contact</a></li>
         </ul>
       </nav>
     </div>
@@ -18,13 +18,12 @@
       <span></span>
     </div>
     <nav class="menu-content" :class="{'open':isClass}">
-      <p class="menu-title">TOTAL WORKS さくらぐみ</p>
       <ul class="menu-content_inner">
-        <li><a href="#"></a>home</li>
-        <li><a href="#"></a>about</li>
-        <li><a href="#"></a>service</li>
-        <li><a href="#"></a>company</li>
-        <li><a href="#"></a>contact</li>
+        <li><a href="#app" @click="hamburger()" :class="{'active':isClass}"></a>home</li>
+        <li><a href="#about" @click="hamburger()" :class="{'active':isClass}"></a>about</li>
+        <li><a href="#business" @click="hamburger()" :class="{'active':isClass}"></a>service</li>
+        <li><a href="#company" @click="hamburger()" :class="{'active':isClass}"></a>company</li>
+        <li><a href="#contact" @click="hamburger()" :class="{'active':isClass}"></a>contact</li>
       </ul>
     </nav>
   </header>
@@ -49,6 +48,9 @@ export default {
   .header {
     height: 60px;
     background: #000;
+    width: 100%;
+    position: fixed;
+    z-index: 999;
   }
 
   .header-wrap {
@@ -77,6 +79,9 @@ export default {
   .header-nav a {
     color: #f2f2f2;
     text-decoration: none;
+  }
+  .menu-content_inner {
+    display: none;
   }
 
   @media screen and (max-width: 768px){
@@ -124,30 +129,24 @@ export default {
     }
     .menu-content{
       display: block;
-      width: calc(100% - 80px);
-      height: 100%;
+      width: calc(100% - 300px);
+      height: 45%;
       text-align: center;
       transition: 0.2s;
       position: fixed;
       top: 0;
       left: calc(-100% - 80px);
-      background: #fff;
-      color: #333333;
-      box-shadow: 80px 0 rgba(38, 98, 213, 0.3);
+      background: rgba(177, 162, 114, 0.7);
+      color: #fff;
       z-index: 999;
-    }
-    .menu-content .menu-title {
-      margin: 40px 20px;
-      font-size: 2.2rem;
-      color: #333333;
-      text-align: left;
-      font-weight: bold;
+      margin-top: 60px;
+      font-size: 1.3rem;
     }
     .menu-content li a {
       color: #333333;
       margin: 15px;
       padding: 5px;
-      border-bottom: 0.5px solid #2662d5;
+      border-bottom: 0.5px solid #333333;
       text-decoration: none;
       display: block;
     }

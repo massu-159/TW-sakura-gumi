@@ -27,7 +27,7 @@
           <h2 class="section-title">service</h2>
           <div class="business-wrap">
               <div class="business-cat" v-for="(data, index) in business" :key="index">
-                  <img :src="data.img">
+                  <font-awesome-icon icon="wrench" />
                   <h3>{{data.title}}</h3>
                   <p>{{data.description}}</p>
               </div>
@@ -259,7 +259,7 @@ input, select {
 #about {
     width: 90%;
     margin: 20px auto;
-    padding: 10px;
+    padding: 50px;
     background: rgba(204, 204, 204, 0.493);
 }
 
@@ -303,7 +303,7 @@ list-style-position: inside;
     font-size: 30px;
     font-weight: bold;
     text-align: center;
-    padding: 40px 0;
+    padding: 60px 0;
     margin: 0;
     color: #fff;
 }
@@ -341,7 +341,7 @@ list-style-position: inside;
 }
 
 #company {
-    padding: 40px 0 70px 0;
+    padding: 60px 0 70px 0;
     width: 90%;
     margin: 20px auto;
     background: rgba(204, 204, 204, 0.5);
@@ -380,7 +380,7 @@ list-style-position: inside;
 #contact .section-title {
     font-size: 30px;
     font-weight: bold;
-    padding: 40px 0;
+    padding: 60px 0;
     text-align: center;
     margin: 0;
     color: #fff;
