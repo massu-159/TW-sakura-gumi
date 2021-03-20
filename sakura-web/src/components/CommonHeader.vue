@@ -19,11 +19,11 @@
     </div>
     <nav class="menu-content" :class="{'open':isClass}">
       <ul class="menu-content_inner">
-        <li><a href="#app" @click="hamburger()" :class="{'active':isClass}"></a>home</li>
-        <li><a href="#about" @click="hamburger()" :class="{'active':isClass}"></a>about</li>
-        <li><a href="#business" @click="hamburger()" :class="{'active':isClass}"></a>service</li>
-        <li><a href="#company" @click="hamburger()" :class="{'active':isClass}"></a>company</li>
-        <li><a href="#contact" @click="hamburger()" :class="{'active':isClass}"></a>contact</li>
+        <li><a href="#app" @click="hamburger()" :class="{'active':isClass}">home</a></li>
+        <li><a href="#about" @click="hamburger()" :class="{'active':isClass}">about</a></li>
+        <li><a href="#business" @click="hamburger()" :class="{'active':isClass}">service</a></li>
+        <li><a href="#company" @click="hamburger()" :class="{'active':isClass}">company</a></li>
+        <li><a href="#contact" @click="hamburger()" :class="{'active':isClass}">contact</a></li>
       </ul>
     </nav>
   </header>
@@ -85,6 +85,7 @@ export default {
   }
 
   @media screen and (max-width: 768px){
+    
     #hamburger {
       width: 40%;
       height: 40px;
@@ -130,7 +131,7 @@ export default {
     .menu-content{
       display: block;
       width: calc(100% - 300px);
-      height: 45%;
+      height: 35%;
       text-align: center;
       transition: 0.2s;
       position: fixed;
@@ -143,7 +144,7 @@ export default {
       font-size: 1.3rem;
     }
     .menu-content li a {
-      color: #333333;
+      color: #fff;
       margin: 15px;
       padding: 5px;
       border-bottom: 0.5px solid #333333;
@@ -156,6 +157,9 @@ export default {
     }
     .menu-content.open {
       left: 0;
+    }
+    .menu-content_inner {
+      display: block;
     }
   }
 </style>

@@ -7,10 +7,10 @@
         <p>TOTAL WORKS</p>
       </div>
       <div id="about">
-          <h2 class="section-title">about</h2>
+          <h2 class="section-title"><font-awesome-icon icon="check-circle"/> about</h2>
           <div class="about-wrap">
               <div class="about-left">
-                  <img src="./assets/img 2/bg2.jpg">
+                  <img src="./assets/img 2/carpenter.jpg">
               </div>
               <div class="about-right">
                   <h3>TOTAL WORKS さくらぐみ</h3>
@@ -24,17 +24,17 @@
           </div>
       </div>
       <div id="business">
-          <h2 class="section-title">service</h2>
+          <h2 class="section-title"><font-awesome-icon icon="briefcase"/> service</h2>
           <div class="business-wrap">
               <div class="business-cat" v-for="(data, index) in business" :key="index">
-                  <font-awesome-icon icon="wrench" />
+                  <font-awesome-icon :icon="data.icon" class="tools">{{data.icon}}</font-awesome-icon>
                   <h3>{{data.title}}</h3>
                   <p>{{data.description}}</p>
               </div>
           </div>
       </div>
       <div id="company">
-          <h2 class="section-title">company</h2>
+          <h2 class="section-title"><font-awesome-icon icon="warehouse"/> company</h2>
           <table class="contain">
               <tr>
                   <th>屋号</th>
@@ -65,13 +65,13 @@
                   <td>hisamune@sakuragumi.jp</td>
               </tr>
               <tr>
-                  <th>事業内容</th>
+                  <th>主な事業内容</th>
                   <td>外構工事業</td>
               </tr>
           </table>
       </div>
       <div id="contact">
-          <h2 class="section-title">contact</h2>
+          <h2 class="section-title"><font-awesome-icon icon="user-check"/> contact</h2>
             <form class="form" method="post" @submit.prevent="sendContact()">
                 <div>
                     <label for="name">Name:</label>
@@ -106,14 +106,14 @@ export default {
     data(){
         return {
             business: [
-                {img: require("./assets/img 2/business-icon.png"), 
-                title: "ビジネスA",
+                {icon: "tools", 
+                title: "外構工事業",
                 description: "ビジネスの説明が入ります。ビジネスの説明が入ります。ビジネスの説明が入ります。"},
-                {img: require("./assets/img 2/business-icon.png"), 
-                title: "ビジネスA",
+                {icon: "truck", 
+                title: "運送業",
                 description: "ビジネスの説明が入ります。ビジネスの説明が入ります。ビジネスの説明が入ります。"},
-                {img: require("./assets/img 2/business-icon.png"), 
-                title: "ビジネスA",
+                {icon: "utensils", 
+                title: "飲食業",
                 description: "ビジネスの説明が入ります。ビジネスの説明が入ります。ビジネスの説明が入ります。"}
             ],
             text: "", email: "", tel: "", msg: ""
@@ -236,6 +236,10 @@ input, select {
     vertical-align:middle;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 #eyecatch {
     height: 600px;
     background: url(./assets/img 2/eyecatch.jpeg) no-repeat;
@@ -259,7 +263,7 @@ input, select {
 #about {
     width: 90%;
     margin: 20px auto;
-    padding: 50px;
+    padding: 50px 0;
     background: rgba(204, 204, 204, 0.493);
 }
 
@@ -278,6 +282,10 @@ input, select {
 
 .about-right h3, .about-right p {
     margin-bottom: 15px;
+}
+
+.about-right h3 {
+  font-size: 25px;
 }
 
 .about-left, .about-right {
@@ -321,6 +329,12 @@ list-style-position: inside;
     padding: 20px 35px 30px;
     box-sizing: border-box;
     margin-bottom: 50px;
+}
+
+.tools {
+  font-size: 50px;
+  color: #fff;
+  margin: 10px 0 20px;
 }
 
 .business-cat h3 {
