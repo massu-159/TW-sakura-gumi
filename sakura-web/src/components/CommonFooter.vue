@@ -57,6 +57,11 @@ export default {
   color: #f2f2f2;
   text-decoration: none;
 }
+
+.header-nav a:hover {
+    color: rgba(177, 162, 114, 1);
+  }
+
 .footer {
   height: 80px;
   text-align: center;

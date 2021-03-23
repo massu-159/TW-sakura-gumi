@@ -80,6 +80,11 @@ export default {
     color: #f2f2f2;
     text-decoration: none;
   }
+
+  .header-nav a:hover {
+    color: rgba(177, 162, 114, 1);
+  }
+  
   .menu-content_inner {
     display: none;
   }
@@ -94,7 +99,7 @@ export default {
       z-index: 100;
       top: 15px;
       right: -100px;
-      transition: 0.4s;
+      transition: 0.2s;
     }
     #hamburger span {
       position: absolute;
@@ -103,7 +108,7 @@ export default {
       width: 35px;
       height: 2px;
       background-color: #fff;
-      transition: 0.8s;
+      transition: 0.2s;
     }
     #hamburger span:nth-of-type(1) {
       top: 10px;
@@ -131,7 +136,6 @@ export default {
     .menu-content{
       display: block;
       width: calc(100% - 300px);
-      height: 35%;
       text-align: center;
       transition: 0.2s;
       position: fixed;
@@ -145,12 +149,22 @@ export default {
     }
     .menu-content li a {
       color: #fff;
-      margin: 15px;
-      padding: 5px;
+      margin-bottom: 2px;
+      padding: 20px;
       border-bottom: 0.5px solid #333333;
       text-decoration: none;
       display: block;
     }
+
+    .menu-content a:hover {
+      color: rgba(177, 162, 114, 0.7);
+    }
+
+    .menu-content li:hover {
+      background: #fff;
+      opacity: 0.7;
+    }
+
     .menu-content li {
       width: 100%;
       text-align: left;
