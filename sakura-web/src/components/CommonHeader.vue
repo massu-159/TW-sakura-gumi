@@ -135,7 +135,7 @@ export default {
     }
     .menu-content{
       display: block;
-      width: calc(100% - 300px);
+      width: calc(100% - 230px);
       text-align: center;
       transition: 0.2s;
       position: fixed;

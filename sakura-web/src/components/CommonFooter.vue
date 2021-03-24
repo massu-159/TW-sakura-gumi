@@ -68,4 +68,7 @@ export default {
   line-height: 750px;
   color:#f2f2f2
 }
+.footer small {
+  font-size: 6px;
+}
 </style>
