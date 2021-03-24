@@ -12,7 +12,7 @@
       </nav>
     </div>
     <div class="footer">
-      <small>Copyright 2021 TOTAL WORKS sakuragumi All Rights Reserved.</small>
+      <small>Copyright 2021 TOTAL WORKS All Rights Reserved.</small>
     </div>
   </footer>
 </template>
