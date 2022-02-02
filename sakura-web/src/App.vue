@@ -46,7 +46,7 @@
               </tr>
               <tr>
                   <th>所在地</th>
-                  <td>兵庫県宍粟市山崎町0-0-0</td>
+                  <td>xxxxxxxxxx0-0-0</td>
               </tr>
               <tr>
                   <th>従業員数</th>
